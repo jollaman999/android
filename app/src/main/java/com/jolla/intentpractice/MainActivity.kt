@@ -2,14 +2,15 @@ package com.jolla.intentpractice
 
 import android.app.Activity
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContract
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
     lateinit var text_second_result : TextView
@@ -26,8 +27,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val Button : Button = findViewById(R.id.intent_button)
-        Button.setOnClickListener {
+        val btn_intent: Button = findViewById(R.id.btn_intent)
+        btn_intent.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("jolla", "Hello, jolla!")
             // startActivityForResult(intent, 999)
@@ -35,6 +36,49 @@ class MainActivity : AppCompatActivity() {
         }
 
         text_second_result = findViewById(R.id.second_result)
+
+        // 인텐트 필터 실습 1
+        val et_phone_number: EditText = findViewById(R.id.et_phone_number)
+        val btn_call_phone: Button = findViewById(R.id.btn_call_phone)
+        btn_call_phone.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_CALL
+            intent.data = Uri.parse("tel:" + et_phone_number.text.toString())
+            startActivity(intent)
+        }
+
+        // 인텐트 필터 실습 2
+        val et_www: EditText = findViewById(R.id.et_www)
+        val btn_action_edit: Button = findViewById(R.id.btn_action_edit)
+        btn_action_edit.setOnClickListener {
+            val intent = Intent()
+            intent.action = Intent.ACTION_EDIT
+            intent.data = Uri.parse("http://" + et_www.text.toString())
+            startActivity(intent)
+        }
+
+        // 인텐트 필터 실습 3
+        val btn_action_hello: Button = findViewById(R.id.btn_action_hello)
+        btn_action_hello.setOnClickListener {
+            val intent = Intent()
+            intent.action = "ACTION_HELLO"
+            try {
+                startActivity(intent)
+            } catch (e: Exception) {
+                Toast.makeText(this, "No activity found to handle 'ACTION_HELLO'",
+                    Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // 인텐트 필터 실습 4
+        val btn_pkg: Button = findViewById(R.id.btn_pkg)
+        btn_pkg.setOnClickListener {
+            val intent = Intent()
+            val pkg = "com.jolla.intent_filter_test"
+            intent.action = Intent.ACTION_VIEW
+            intent.`package` = pkg
+            startActivity(intent)
+        }
     }
 
 //    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

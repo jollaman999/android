@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/IntentPractice/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/IntentPractice/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/AndroidStudioProjects/IntentPractice/app/src/main/res/layout/activity_second.xml" value="0.26165146909827763" />
+        <entry key="..\:/AndroidStudioProjects/IntentPractice/intent_filter_test/src/main/res/layout/activity_main.xml" value="0.12777777777777777" />
       </map>
     </option>
   </component>

@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/intent_button"
+        android:id="@+id/btn_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="두번쨰 열어라!" />
@@ -39,5 +39,75 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인텐트 필터 실습 1"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전화번호 입력"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btn_call_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALL_PHONE" />
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인텐트 필터 실습 2"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_www"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="웹 주소 입력"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/btn_action_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTION_EDIT" />
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인텐트 필터 실습 3"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_action_hello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACTION_HELLO" />
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인텐트 필터 실습 4"
+        android:textAlignment="center"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_pkg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="com.jolla.intent_filter_test" />
 
 </LinearLayout>

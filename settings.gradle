@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "IntentPractice"
 include ':app'
+include ':intent_filter_test'
