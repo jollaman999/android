@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // SecondActivity
         val btn_intent: Button = findViewById(R.id.btn_intent)
         btn_intent.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
@@ -34,8 +35,14 @@ class MainActivity : AppCompatActivity() {
             // startActivityForResult(intent, 999)
             requqestLauncher.launch(intent)
         }
-
         text_second_result = findViewById(R.id.second_result)
+
+        // KeyboardActivity
+        val btn_keyboard: Button = findViewById(R.id.btn_keyboard)
+        btn_keyboard.setOnClickListener {
+            val intent = Intent(this, KeyboardActivity::class.java)
+            startActivity(intent)
+        }
 
         // 인텐트 필터 실습 1
         val et_phone_number: EditText = findViewById(R.id.et_phone_number)

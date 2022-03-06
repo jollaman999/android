@@ -20,7 +20,7 @@
         android:id="@+id/btn_intent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="두번쨰 열어라!" />
+        android:text="두번째 열어라!" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,8 +40,14 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KeyboardActivity" />
+
     <TextView
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="인텐트 필터 실습 1"
@@ -62,7 +68,7 @@
         android:text="CALL_PHONE" />
 
     <TextView
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="인텐트 필터 실습 2"
@@ -83,7 +89,7 @@
         android:text="ACTION_EDIT" />
 
     <TextView
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="인텐트 필터 실습 3"
@@ -97,7 +103,7 @@
         android:text="ACTION_HELLO" />
 
     <TextView
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="인텐트 필터 실습 4"

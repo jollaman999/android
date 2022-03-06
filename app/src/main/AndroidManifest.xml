@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jolla.intentpractice">
-    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <queries>
         <package android:name="com.jolla.intent_filter_test" />
@@ -30,6 +29,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:scheme="http" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".KeyboardActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
         </activity>
     </application>
 
